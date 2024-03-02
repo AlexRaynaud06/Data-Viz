@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+<!-- head -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>MSc Finance & Big Data - Data visualization 2023</title>
+
+  <!-- bulma and font awesome -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" crossorigin="anonymous">
+</head>
+
+<!-- body -->
+<body>
+
+  <!-- header -->
+  <section class="hero is-info is-bold">
+    <!-- todo: change assignment and name -->
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          Data Visualization Assignment
+        </h1>
+        <h2 class="subtitle">
+          Alexandre Raynaud
+        </h2>
+      </div>
+    </div>
+
+    <!-- change navigation if needed -->
+    <div class="hero-foot">
+      <div class="container">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+
+          <div class="navbar-brand">
+            <a class="navbar-item" href="#top">
+              <span class="icon">
+                <i class="fas fa-home"></i>
+              </span>
+              <span>Home</span>
+            </a>
+          </div>
+
+          <div id="main-navbar" class="navbar-menu">
+            <a class="navbar-item" href="#viz1">
+              <span class="icon">
+                <i class="fas fa-chart-area"></i>
+              </span>
+              <span>Visualization 1</span>
+            </a>
+          </div>
+
+          <div class="navbar-end">
+            <a class="navbar-item" href="#about">
+              <span class="icon">
+                <i class="fas fa-info-circle"></i>
+              </span>
+              <span>About</span>
+            </a>
+          </div>
+
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container content">
+      
+      <h2 id="viz1">Visualization 1    
+      </h2>
+
+      <svg width="100%" height="400" style="background-color: whitesmoke; border: 1px solid black;">
+      <image href="viz_1.png" x="0" y="0" height="400px" width="100%"/>
+      </svg>
+
+
+      <h2 id="viz2">Visualization 2</h2>
+
+      <svg width="100%" height="400" style="background-color: whitesmoke; border: 1px solid black;">
+      <image href="viz_2.png" x="0" y="0" height="400px" width="100%"/>
+      </svg>
+
+      <h2 id="viz3">Visualization 3</h2>
+
+      <svg width="100%" height="400" style="background-color: whitesmoke; border: 1px solid black;">
+      <image href="viz_3.png" x="0" y="0" height="400px" width="100%"/>
+      </svg>
+
+      <h2 id="viz4">Visualization 4</h2>
+
+      <svg width="100%" height="400" style="background-color: whitesmoke; border: 1px solid black;">
+      <image href="viz_4.png" x="0" y="0" height="400px" width="100%"/>
+      </svg>
+
+      <h3>Interpretation</h3>
+       <style>
+        
+        p {
+            margin-bottom: 1em;
+        }
+        
+        .section {
+            margin-bottom: 2em;
+        }
+        </style>
+
+<body>
+
+<h3>Discussion</h3>
+
+<p class="section">
+    <strong>Visualization 1:</strong><br><br>
+    <strong>Trend:</strong> The actual sales data (blue line) do not exhibit a clear long-term increasing or decreasing trend. Instead, they fluctuate around a certain level. If this were a pure time series without external influences, we might conclude that there's a relatively stable demand for the product with no significant growth or decline over the period shown.<br><br>
+    <strong>Patterns and Seasonality:</strong> There are clear patterns in the actual sales data. The regular fluctuations suggest seasonality, with peaks and troughs occurring at regular intervals. This pattern repeats itself, which is indicative of seasonal effects. For example, sales might increase during certain months due to seasonal demand and decrease in others.<br><br>
+    <strong>Forecast (Green Line):</strong> The forecasted sales follow the seasonality pattern observed in the historical data. This suggests that the model used for forecasting has successfully captured the seasonal pattern and applied it to future predictions. The forecast seems to start at the end of the historical data and extends into the future, showing expected seasonal peaks and valleys continuing.<br><br>
+    <strong>Volatility:</strong> The actual sales show some volatility, with the amplitude of the seasonal peaks varying from cycle to cycle. This might be due to external factors not captured by the model or natural variance in the sales process.<br><br>
+    <strong>Model Fit:</strong> The forecasted sales start after the last actual data point and seem to fit the seasonal pattern well. However, without seeing the actual numbers and residuals, we cannot comment on the quantitative fit of the model.<br><br>
+    <strong>Outliers:</strong> They do not appear to be significant outliers in the actual sales data; the variation seems consistent with the seasonal pattern. Outliers would appear as data points that significantly deviate from the overall pattern, which are not evident here.
+</p>
+
+
+<p class="section">
+    <strong>Visualization 2:</strong><br><br>
+    <strong>Historical Sales (Red Line):</strong> The actual sales data show significant fluctuations, with notable peaks suggesting potential seasonality or sales campaigns.<br><br>
+    <strong>Forecasting Models (Blue and Green Lines with Triangles and Squares):</strong> Two ETS forecasting models are plotted: ETS(M,A,M) and ETS(A,M,A). The blue line with triangles represents a model with multiplicative error, additive trend, and multiplicative seasonality, while the green line with squares likely signifies a model with additive error, multiplicative trend, and additive seasonality.<br><br>
+    <strong>Trend Observation:</strong> There is a decreasing trend observed in the forecasted sales, indicating that the models predict a decline in sales over the forecast period.<br><br>
+    <strong>Seasonality:</strong> Both models appear to capture some seasonality, as evidenced by the consistent patterns in the forecasted data, aligning with the peaks in the historical data.<br><br>
+    <strong>Model Comparison:</strong> The two models show different forecast trajectories, with one declining more sharply than the other. This discrepancy suggests uncertainty in how the trend and seasonality components are modeled, which is due to different parameters or assumptions within the ETS frameworks.
+</p>
+
+
+<p class="section">
+    <strong>Visualization 3:</strong><br><br>
+    <strong>Historical Sales (Red Line):</strong> This line represents the actual sales data, which shows variability with no clear long-term upward or downward trend.<br><br>
+    <strong>ARIMA Forecasts (Blue Line with Squares):</strong> The forecast is generated by an ARIMA model, indicated as ARIMA(0,0,0)(1,1,2)[12] with drift. This suggests a seasonal ARIMA model that does not use autoregressive or moving average components in the non-seasonal part, but includes them in the seasonal part, with a yearly seasonality indicated by [12].<br><br>
+    <strong>Confidence Intervals (Shaded Area):</strong> The shaded area around the forecasted values indicates the confidence intervals, which provide a range where future sales are expected to fall with a certain probability.<br><br>
+    <strong>Trend Analysis:</strong> The drift component in the ARIMA model suggests a slight upward or downward movement over time, which is not evident from the historical data. The drift in the forecast suggests a long-term tendency for sales to increase or decrease.<br><br>
+    <strong>Seasonality:</strong> The model captures the seasonality in the historical data and projects it into the forecast, but with increasing uncertainty over time, as indicated by the widening confidence intervals.<br><br>
+    <strong>Volatility:</strong> The historical sales show significant ups and downs, which the ARIMA model attempts to capture. The increasing width of the confidence intervals in the forecast suggests increasing uncertainty the further out the forecast goes.
+</p>
+
+<p class="section">
+  <strong>Visualization 4:</strong><br><br>
+  <strong>Forecast (Green Dotted Line):</strong> The forecast is a flat line, suggesting that a simple average of historical data is used for forecasting future sales. This model does not account for any trends, seasonality, or patterns observed in the historical data.<br><br>
+  <strong>Trend Analysis:</strong> The forecast model suggests no trend is expected to continue in the future as it predicts a constant sales level.<br><br>
+  <strong>Seasonality and Patterns:</strong> The model used for the forecast does not capture any seasonality or patterns present in the historical data. It simply uses the mean of historical sales as the forecasted value for all future points.<br><br>
+  <strong>Simplicity of the Model:</strong> Such a forecast might be useful as a baseline to compare against more sophisticated models. However, it lacks the detail to be practical if the historical data exhibit clear trends or seasonality, which seems to be the case here. This forecast suggests that sales will continue at the average historical rate, which may not be a realistic assumption given the variability in the historical data.<br><br>
+</p>
+
+</body>
+</html>
+
+
+
+      
+      <h3>Sources</h3>
+      
+      <p>
+
+        Evaluate different predictive sales models for an industrial company. 
+        This exercise is inspired by part of an assignment I did for the "junior Entreprise" during my engineering studies.
+        As the data was confidential, I changed the names of the products and their sales volumes.
+
+        
+      </p>
+    </div>
+  </section>
+
+  <hr class="container">
+
+  <!-- about section -->
+  <!-- fill in, or link to a personal web page  -->
+  <section class="section">
+    <div class="container content">
+      <h2 id="about">
+        About Me
+      </h2>
+
+      <div class="media">
+        <div class="media-left">
+          <p class="image is-128x128">
+            <!-- replace with your profile image -->
+            <img src="https://raw.githubusercontent.com/mscfinance-big-data-viz/indiv-assignment-template/master/suicide_densityFR.png">
+          </p>
+        </div>
+
+        <div class="media-content">
+            <p>
+              <!-- replace with your information -->
+              <strong>My name</strong>
+              <br/>
+              Graduated from and Engineering school - Master Degree in Data Science
+              EIGSI La Rochelle - Casablanca
+              MSc Finance & Big Data
+              NEOMA Business School
+              <strong>
+                professional
+              </strong>
+              Product Controller - LNG/Gas Market Analyst
+              Engie GEMS
+              <br/>
+              <!-- find brand icons at: https://fontawesome.com/icons?d=gallery&s=brands&m=free -->
+              <a href="https://github.com/AlexRaynaud06?tab=repositories">
+                <span class="fab fa-github"></span>
+                <span>Github</span>
+              </a>
+              &bullet;
+              <a href="https://www.linkedin.com/in/alexandre-raynaud-73bb82204/">
+                <span class="fab fa-linkedin"></span>
+                <span>LinkedIn</span>
+              </a>
+            </p>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <small>
+        <a href="#top">
+          <span class="fas fa-arrow-up"></span>
+          <span>Back to Top</span>
+        </a>
+        <br/>
+        <a href="https://www.neoma-bs.fr/formations/masteres-specialises-masters-of-science-temps-partiel/msc-in-finance-and-big-data/presentation-du-programme">MSc Finance & Big Data / Data visualization</a>
+        &bullet;
+        <a href="https://https://www.neoma-bs.fr/">Neoma Business School</a>
+      </small>
+    </div>
+  </footer>
+
+</body>
+</html>
